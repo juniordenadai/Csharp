@@ -86,7 +86,7 @@ namespace Curso
             Console.WriteLine(salarioMedio);
             */
 
-            //Aula 42 Produto
+            /*/Aula 42 Produto
 
             Produto p1 = new Produto();
 
@@ -107,7 +107,16 @@ namespace Curso
             Console.WriteLine("Entre com a quantidade a ser removida ");
             qtd = int.Parse(Console.ReadLine());
             p1.RemoverProdutos(qtd);
-            Console.WriteLine("Dados Atualizados: " + p1);
+            Console.WriteLine("Dados Atualizados: " + p1);*/
+
+            //exercicio 1 - fixacao
+            //calcular area, perimetro e diagonal de um retangulo
+
+            Console.Write("Entre com a largula e altura de um triangulo: " );
+            double largura = double.Parse(Console.ReadLine());
+            double altura = double.Parse(Console.ReadLine());
+
+            Console.WriteLine(largura + altura);
         }
     }
 }
