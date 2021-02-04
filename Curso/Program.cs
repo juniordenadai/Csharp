@@ -109,14 +109,38 @@ namespace Curso
             p1.RemoverProdutos(qtd);
             Console.WriteLine("Dados Atualizados: " + p1);*/
 
-            //exercicio 1 - fixacao
+            /*exercicio 1 - fixacao
             //calcular area, perimetro e diagonal de um retangulo
+            Retangulo r = new Retangulo();
 
-            Console.Write("Entre com a largula e altura de um triangulo: " );
-            double largura = double.Parse(Console.ReadLine());
-            double altura = double.Parse(Console.ReadLine());
+            Console.WriteLine("Entre com a largula e altura de um retangulo: " );
+            r.Largura = double.Parse(Console.ReadLine());
+            r.Altura = double.Parse(Console.ReadLine());
+            
+            Console.WriteLine("largura :" + r.Largura + " Altura: " +  r.Altura+ " Area:  " + r.CalcularArea() + " perimetro: " + r.CalcularPerimetro()+ " Diagonal: "+ r.CalcularDiagonal());
 
-            Console.WriteLine(largura + altura);
+
+            */
+            //exercicio 2 (funcionario)
+
+            Funcionario pessoa = new Funcionario();
+            
+            Console.Write("Entre com Nome: ");
+            pessoa.Nome = Console.ReadLine();
+
+            Console.Write("Entre com Salario: ");
+            pessoa.SalarioBruto = double.Parse(Console.ReadLine());
+
+            Console.Write("Entre com Imposto: ");
+            pessoa.Imposto = double.Parse(Console.ReadLine());
+
+            Console.WriteLine(pessoa);
+
+            Console.Write("Entre com porcentagem aumento salario: ");
+            double porcentagem = double.Parse(Console.ReadLine());
+            pessoa.AumentarSalario(porcentagem);
+            Console.WriteLine("dados atualizados: " + pessoa);
+
         }
     }
 }
