@@ -121,7 +121,7 @@ namespace Curso
 
 
             */
-            //exercicio 2 (funcionario)
+            /*exercicio 2 (funcionario)
 
             Funcionario pessoa = new Funcionario();
             
@@ -140,7 +140,78 @@ namespace Curso
             double porcentagem = double.Parse(Console.ReadLine());
             pessoa.AumentarSalario(porcentagem);
             Console.WriteLine("dados atualizados: " + pessoa);
+            */
 
+            /* exercicio aluno
+            Aluno pessoa = new Aluno();
+            Console.Write("Digite o nome do Aluno: ");
+            pessoa.Nome = Console.ReadLine();
+            Console.WriteLine("Digite As tres notas do Aluno: ");
+            pessoa.NotaPrimeiroTrimestre = double.Parse(Console.ReadLine());
+            pessoa.NotaSegundoTrimestre = double.Parse(Console.ReadLine());
+            pessoa.NotaTerceiroTrimestre = double.Parse(Console.ReadLine());
+
+            Console.WriteLine("Nota Final: " + pessoa.Notafinal());
+
+            if (pessoa.Notafinal() > 60)
+            {
+                Console.WriteLine("APROVADO");
+            }
+            else
+            {
+                Console.WriteLine("REPROVADO");
+                Console.WriteLine("FALTARAM " + (60 - pessoa.Notafinal()) + " PONTOS");
+            }
+            */
+
+            /*
+            int n = int.Parse(Console.ReadLine());
+
+            Product[] vect = new Product[n];
+
+            for (int i = 0; i < n; i++)
+            {
+                string name = Console.ReadLine();
+                double price = double.Parse(Console.ReadLine());
+                vect[i] = new Product { Nome = name, Price = price };
+            }
+
+            double sum = 0.0;
+            for(int i = 0; i < n; i++)
+            {
+                sum += vect[i].Price; 
+            }
+            double avg = sum / n;
+
+            Console.WriteLine("precomedio de produtos: " + avg);
+
+        }
+            */
+
+            // vetor de alugueldequartos
+
+            Console.WriteLine("how many rooms do you need?");
+            int n = int.Parse(Console.ReadLine());
+            Reserva[] reserva = new Reserva[10];
+
+            for (int i = 0 ; i < n; i++)
+            {
+                Console.WriteLine("Entre com o nome do Hospede: ");
+                string nome = Console.ReadLine();
+                Console.WriteLine("Entre com o email do Hospede: ");
+                string email = Console.ReadLine();
+                Console.WriteLine("Entre com o quarto desejado: ");
+                int quarto = int.Parse(Console.ReadLine());
+
+                reserva[quarto] = new Reserva { Nome = nome, Email = email, Room = quarto };
+
+            }
+            Console.WriteLine("Quartos ocupados:");
+            for (int i = 0; i < 10; i++)
+                if (reserva[i] != null)
+                {
+                    Console.WriteLine(reserva[i]);
+                }
         }
     }
 }
