@@ -1,6 +1,7 @@
 ﻿using Course;
 using System;
 using System.Globalization;
+using System.Collections.Generic;
 
 namespace Curso
 {
@@ -189,7 +190,7 @@ namespace Curso
             */
 
             // vetor de alugueldequartos
-
+            /*
             Console.WriteLine("how many rooms do you need?");
             int n = int.Parse(Console.ReadLine());
             Reserva[] reserva = new Reserva[10];
@@ -212,6 +213,63 @@ namespace Curso
                 {
                     Console.WriteLine(reserva[i]);
                 }
+            */
+            /*
+            int result = Calculator.Sum(5,5,5);
+            Console.WriteLine( result);
+
+            int a = 10;
+            Calculator.Triple(ref a);
+            Console.WriteLine(a);
+
+
+            int b = 10;
+            int triple;
+            Calculator.Triple3x(b, out triple);
+            Console.WriteLine(triple);
+
+            */
+
+            /*listas
+            List<string> list = new List<string>();
+            */
+
+            //matriz
+
+            int n;
+            Console.WriteLine("entre com a dimensaoda matriz: ");
+            n = int.Parse(Console.ReadLine());
+            int[,] mat = new int[n,n];
+            Console.WriteLine("entre com os dados: ");
+
+            for (int i = 0; i < n; i++)
+            {
+                string[] values = Console.ReadLine().Split(' ');
+                for (int j = 0; j<n; j++)
+                {
+                    mat[i, j] = int.Parse(values[j]);
+                }
+            }
+
+            Console.WriteLine("diagonal numbers: ");
+
+            for (int i=0; i<n; i++)
+            {
+                Console.WriteLine(mat[i,i]);
+            }
+
+            int count = 0;
+            for (int i=0; i < n; i++)
+            {
+                for(int j=0; j< n; j++)
+                {
+                    if(mat[i,j] < 0)
+                    
+                        count++;
+                    
+                }
+            }
+            Console.WriteLine("negative numbers: "+ count);
         }
     }
 }
