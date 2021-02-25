@@ -2,6 +2,7 @@
 using System;
 using System.Globalization;
 using System.Collections.Generic;
+using Curso.Entities;
 
 namespace Curso
 {
@@ -234,7 +235,7 @@ namespace Curso
             List<string> list = new List<string>();
             */
 
-            //matriz
+            /*matriz
 
             int n;
             Console.WriteLine("entre com a dimensaoda matriz: ");
@@ -270,6 +271,46 @@ namespace Curso
                 }
             }
             Console.WriteLine("negative numbers: "+ count);
+
+            */
+
+            Console.Write("Entre com Numero de Empregados: ");
+            int n = int.Parse(Console.ReadLine());
+            List<Employee> list = new List<Employee>();
+            char outsourced;
+
+            for (int i = 1; i <= n; i++)
+            {
+                Console.WriteLine($"Employee # {i} data");
+                Console.Write("Outsourced (y/n) ");
+                outsourced = char.Parse(Console.ReadLine());
+
+                Console.Write("Name: ");
+                string name = Console.ReadLine();
+                Console.Write("Hours: ");
+                int hour = int.Parse(Console.ReadLine());
+                Console.Write("Value per Hour: ");
+                double valuePerHour = double.Parse(Console.ReadLine());
+                if (outsourced == 'Y' || outsourced == 'y')
+                {
+                    Console.WriteLine("Adittional Charge: ");
+                    double additionalCharge = double.Parse(Console.ReadLine());
+                    list.Add(new OutsourceEmployee(name, hour, valuePerHour, additionalCharge));
+                }
+                else
+                {
+                    list.Add(new Employee(name, hour, valuePerHour));
+                }
+            }
+
+            Console.WriteLine("Payments:");
+           
+            
+            foreach (Employee emp in list)
+            {
+                Console.WriteLine(emp);
+            }
+
         }
     }
 }
